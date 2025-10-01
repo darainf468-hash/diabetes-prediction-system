@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f7f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Reusable Container --- */
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Header & Navigation --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7.5%;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0056b3; /* Primary Blue */
+    text-decoration: none;
+}
+
+.logo span {
+    color: #007bff; /* Lighter Blue */
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #555;
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin-left: 10px;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* --- Hero Section (Home Page) --- */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+}
+.hero-text { flex: 1; }
+.hero-image { flex: 1; text-align: center; }
+.hero-image img { max-width: 100%; height: auto; border-radius: 8px; }
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.hero-text p {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background: #007bff;
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* --- General Content Styles --- */
+h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #0056b3;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    background-color: #f8f9fa;
+    padding: 12px;
+    border-left: 4px solid #007bff;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+/* --- Prediction Form --- */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+#prediction-form button {
+    grid-column: 1 / -1; /* Make button span both columns */
+    margin-top: 20px;
+}
+
+/* --- Results Area --- */
+#results-container {
+    margin-top: 40px;
+    padding: 25px;
+    border-top: 2px solid #eee;
+}
+
+#results-container.hidden { display: none; }
+
+#result-text {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+#result-text.positive { background-color: #f8d7da; color: #721c24; }
+#result-text.negative { background-color: #d4edda; color: #155724; }
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    background: #343a40;
+    margin-top: 40px;
+}

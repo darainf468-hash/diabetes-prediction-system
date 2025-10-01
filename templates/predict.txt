@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Entry Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        body {
+            background: url('aaa.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .container {
+            width: 40%;
+            margin: 30px auto;
+            background:   white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            color: black;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .logo img {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .logo span {
+            font-size: 24px;
+            font-weight: bold;
+            color: #E33E3E;
+        }
+
+        h2 {
+            text-align: center;
+            color: red;
+            font-size: 36px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid blue;
+            border-radius: 5px;
+        }
+
+        .save-btn {
+            background-color: #526D96;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .save-btn:hover {
+            background-color: #42587E;
+        }
+
+        .save-btn:disabled {
+            background-color: gray;
+            cursor: not-allowed;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            background: #0f6bae;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="logo">
+        <a href="home.html"><img src="asss.jpg" alt="Logo"></a>
+        <span>HealVibe</span>
+    </div>
+    <h2>Diabetes Entry Form</h2>
+    <form id="patientForm">
+        <div class="form-group">
+            <label for="patientID">Patient ID</label>
+            <input type="text" id="patientID" placeholder="Enter Your Id" required>
+        </div>
+
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" placeholder="Enter Your Age"  required>
+        </div>
+
+        <div class="form-group">
+            <label for="bmi">BMI</label>
+            <input type="text" id="bmi" placeholder="Enter Your BMI(weight in kg/(height in m)^2)" required>
+        </div>
+
+        <div class="form-group">
+            <label for="glucose">Glucose</label>
+            <input type="text" id="glucose" placeholder="Enter Your Glucose level in mg/dL" required>
+        </div>
+
+        <div class="form-group">
+            <label for="pregnancy">Pregnancy</label>
+            <input type="text" id="pregnancy" placeholder="Enter Your Pregnancy times" required>
+        </div>
+
+        <div class="form-group">
+            <label for="bloodPressure">Diastolic Blood Pressure</label>
+            <input type="text" id="bloodPressure" placeholder="Enter bloodPressure in mmHg" required>
+        </div>
+
+        <div class="form-group">
+            <label for="dpf">Diabetes Pedigree Function</label>
+            <input type="text" id="dpf" placeholder="Enter DPF in points" required>
+        </div>
+
+        <div class="form-group">
+            <label for="skinThickness">Skin Thickness</label>
+            <input type="text" id="skinThickness" placeholder="Enter skinThickness in mm" required>
+        </div>
+
+        <div class="form-group">
+            <label for="insulin">Insulin level</label>
+            <input type="text" id="insulin" placeholder="Enter Insulin level in muU/mL" required>
+        </div>
+
+        <button type="button" class="save-btn" id="saveBtn" onclick="saveData()" disabled>Save Patient Entry</button>
+    </form>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("patientForm");
+        const saveBtn = document.getElementById("saveBtn");
+
+        function checkFormFields() {
+            let allFilled = true;
+            const inputs = form.querySelectorAll("input[required]");
+
+            inputs.forEach(input => {
+                if (input.value.trim() === "") {
+                    allFilled = false;
+                }
+            });
+
+            saveBtn.disabled = !allFilled;
+        }
+
+        form.addEventListener("input", checkFormFields);
+
+        window.saveData = function () {
+            let userdata = {
+                patientID: document.getElementById("patientID").value,
+                age: document.getElementById("age").value,
+                bmi: document.getElementById("bmi").value,
+                glucose: document.getElementById("glucose").value,
+                pregnancy: document.getElementById("pregnancy").value,
+                bloodPressure: document.getElementById("bloodPressure").value,
+                dpf: document.getElementById("dpf").value,
+                skinThickness: document.getElementById("skinThickness").value,
+                insulin: document.getElementById("insulin").value
+            };
+
+            localStorage.setItem("userdata", JSON.stringify(userdata));
+            window.location.href = "userdata.html";
+        };
+    });
+</script>
+<footer>
+    <p>&copy; 2025 HealVibe. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
