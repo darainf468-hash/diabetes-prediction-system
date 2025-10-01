@@ -50,10 +50,6 @@ The BiLSTM model was rigorously evaluated using 10-fold cross-validation, achiev
 | **Accuracy**        | 97.54%            |
 | **Precision**       | 98.09%            |
 | **Recall**          | 97.56%            |
-| **F1-Score**        | 98.7----------------- |
-| **Accuracy**        | 97.54%            |
-| **Precision**       | 98.09%            |
-| **Recall**          | 97.56%            |
 | **F1-Score**        | 98.77%            |
 
 ## Getting Started
