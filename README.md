@@ -151,16 +151,6 @@ To get a local copy up and running, follow these simple steps.
 
 3.  Enter the patient's data into the form and click "Predict" to see the results.
 
-## License
-
-This project is distributed under the MIT License. See the `LICENSE` file for more information.
-
-## Acknowledgements
-
-This project is based on the
-    ```
-
-3.  Enter the patient's data into the form and click "Predict" to see the results.
 
 ## License
 
