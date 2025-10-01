@@ -65,17 +65,8 @@ To get a local copy up and running, follow these simple steps.
 
 4.  **Install the required packages:**
     ```sh
-    pip install -r requirements.txt7%            |
-
-## Getting Started
-
-To get a local copy up and running, follow these simple steps.
-
-### Prerequisites
-
--   Python 3.8+
--   pip (Python package installer)
-
+    pip install -r requirements.txt
+    ```
 
 ### Usage
 
@@ -90,7 +81,6 @@ To get a local copy up and running, follow these simple steps.
     ```
 
 3.  Enter the patient's data into the form and click "Predict" to see the results.
-
 
 ## License
 
