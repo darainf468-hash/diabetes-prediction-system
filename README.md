@@ -169,4 +169,3 @@ This project is distributed under the MIT License. See the `LICENSE` file for mo
 ## Acknowledgements
 
 This project is based on the findings and methodology presented in the accompanying research paper. The work aims to provide a practical tool that can aid in clinical decision-making and improve patient outcomes in diabetes care.
- findings and methodology presented in the accompanying research paper. The work aims to provide a practical tool that can aid in clinical decision-making and improve patient outcomes in diabetes care.
